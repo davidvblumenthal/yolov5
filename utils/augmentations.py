@@ -17,7 +17,7 @@ class Albumentations:
         self.transform = None
         try:
             import albumentations as A
-            check_version(A.__version__, '1.0.0')  # version requirement
+            check_version(A.__version__, '1.0.2')  # version requirement
 
             self.transform = A.Compose([
                 A.Blur(p=0.1),
@@ -25,7 +25,7 @@ class Albumentations:
                 A.ToGray(p=0.01)],
                 bbox_params=A.BboxParams(format='yolo', label_fields=['class_labels']))
 
-            logging.info(colorstr('albumentations: ') + ', '.join(f'{x}' for x in self.transform.transforms))
+            logging.info(colorstr('albumentations: ') + ', '.join(f'{x}' for x in self.transform.transforms if x.p))
         except ImportError:  # package not installed, skip
             pass
         except Exception as e:
