@@ -12,7 +12,7 @@ warmup_bias_lr: 0.0711
 box: 0.04
 cls: 0.6
 cls_pw: 1.0
-obj: 1.02
+obj: 1.1
 obj_pw: 1.0
 iou_t: 0.2
 anchor_t: 4.05
