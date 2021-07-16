@@ -26,7 +26,7 @@ translate: 0.245
 scale: 0.898
 shear: 0.602
 perspective: 0.0
-flipud: 0.05
+flipud: 0.1
 fliplr: 0.5
 mosaic: 1.0
 mixup: 0.0
